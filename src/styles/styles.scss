@@ -49,6 +49,8 @@ h1 {
   line-height: 90%;
 }
 
+
+// slide styles from first animation
 .slide-in {
   position: absolute;
   top: 0;
@@ -133,4 +135,16 @@ h1 {
     top: 0;
     left: 0;
   }
+}
+
+.home_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  // font-size: 100px;
+  // line-height: 90%;
 }
