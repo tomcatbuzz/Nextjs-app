@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { opacity, expand } from './anim';
+import styles from './style.module.scss'
 
 export default function Grid({children, custom}) {
 
@@ -17,9 +18,9 @@ export default function Grid({children, custom}) {
     const nbOfSquares = 5
     console.log(nbOfSquares)
     return (
-        <div className='page grid'>
-            <motion.div {...anim(opacity)} className='transition-background'/>
-            <div className='transition-container'>
+        <div className={grid}>
+            <motion.div {...anim(opacity)} className={transition-background}/>
+            <div className={transition-container}>
                 {
                     [...Array(nbOfSquares)].map( (_, i) => {
                         return (
