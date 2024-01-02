@@ -31,6 +31,18 @@ header .header-items .header-item,
   padding: 1em 2em;
 }
 
+.menu {
+  width: 480px;
+  height: 650;
+  background-color: #c9fd74;
+  border-radius: 25px;
+  position: relative;
+}
+
+.active {
+  text-decoration: underline;
+}
+
 a {
   text-decoration: none;
   color: #000;

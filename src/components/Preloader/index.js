@@ -8,6 +8,19 @@ const words = ["Hello", "Bonjour", "Ciao", "Olà", "やあ", "Hallå", "Guten ta
 export default function Index() {
     const [index, setIndex] = useState(0);
     const [dimension, setDimension] = useState({width: 0, height:0});
+    const [counter, setCounter] = useState(0);
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        if (counter < 100) {
+          setCounter(counter + 1);
+        } else {
+          clearInterval(interval);
+        }
+      }, 10); // Adjust the interval duration as needed (in milliseconds)
+
+      return () => clearInterval(interval);
+    }, [counter]);
 
     useEffect( () => {
         setDimension({width: window.innerWidth, height: window.innerHeight})
@@ -38,7 +51,7 @@ export default function Index() {
         <motion.div variants={slideUp} initial="initial" exit="exit" className={styles.introduction}>
             {dimension.width > 0 && 
             <>
-                <motion.p variants={opacity} initial="initial" animate="enter"><span></span>{words[index]}</motion.p>
+                <motion.p variants={opacity} initial="initial" animate="enter">{counter}%<span></span>{words[index]}</motion.p>
                 <svg>
                     <motion.path variants={curve} initial="initial" exit="exit"></motion.path>
                 </svg>

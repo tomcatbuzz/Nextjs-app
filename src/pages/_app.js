@@ -38,16 +38,12 @@ const App = ({ Component, pageProps}) => {
 
   return (
     <>
-    <AnimatePresence>
-      {isLoading && <Preloader />}
-    </AnimatePresence>
-    <AnimatePresence mode="wait" initial={false}>
-    
-    <motion.div key={router.pathname}>
-    
-      <Component {...pageProps} /> 
-      
-    {/* <motion.div 
+      <AnimatePresence>{isLoading && <Preloader />}</AnimatePresence>
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.div key={router.pathname}>
+          <Component {...pageProps} />
+
+          {/* <motion.div 
     className="slide-in"
     initial={{ scaleY: 0 }}
     animate={{ scaleY: 0 }}
@@ -61,23 +57,20 @@ const App = ({ Component, pageProps}) => {
     transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}>
 
     </motion.div> */}
-    <div className='page grid'>
-            <motion.div {...anim(opacity)} className='transition-background'/>
-            <div className='transition-container'>
-                {
-                    [...Array(nbOfSquares)].map( (_, i) => {
-                        return (
-                            <motion.div key={i} {...anim(expand, nbOfSquares - i)} />
-                        ) 
-                    })
-                }
+          <div className="page grid">
+            <motion.div {...anim(opacity)} className="transition-background" />
+            <div className="transition-container">
+              {[...Array(nbOfSquares)].map((_, i) => {
+                return (
+                  <motion.div key={i} {...anim(expand, nbOfSquares - i)} />
+                );
+              })}
             </div>
-            
-        </div>
-    </motion.div>
-    </AnimatePresence>
+          </div>
+        </motion.div>
+      </AnimatePresence>
     </>
-  )
+  );
 };
 
 export default App;

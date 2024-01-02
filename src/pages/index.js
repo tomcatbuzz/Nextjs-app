@@ -10,7 +10,7 @@ export default function Home() {
         <AnimatedTextWord  text="Home is here" />
       </div> */}
       <div className="home_container">
-        <AnimatedTextCharacter  text="Home is here" />
+        <AnimatedTextCharacter  text="Tomcatbuzz" />
       </div>
       
       {/* <motion.h1
