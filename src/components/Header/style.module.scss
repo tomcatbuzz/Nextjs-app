@@ -3,7 +3,8 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 1em;
+  // padding: 1em;
+  margin-top: 10px;
 
   .headerItems {
     display: flex;
@@ -12,6 +13,12 @@
     .logo {
       padding: 1em 2em;
     }
+    // .headerItem {
+    //   padding: 1em 2em;
+    // }
+    // &:nth-last-child(even) {
+    //   margin-right: 30px;
+    // }
   }
 
   .active {
@@ -32,5 +39,5 @@
   background-color: #c9fd74;
   border-radius: 25px;
   position: relative;
-  z-index: 1;
+  margin-right: 10px;
 }

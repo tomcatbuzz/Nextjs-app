@@ -30,10 +30,13 @@ export default function Header() {
 
   return (
     <div className={styles.header}>
+      {/* <div className={`${styles.headerItems} ${styles.logo}`}>
+        <Link href="/">Tomcatbuzz</Link>
+      </div> */}
+      <div className={styles.headerItems}>
       <div className={styles.logo}>
         <Link href="/">Tomcatbuzz</Link>
       </div>
-      <div className={styles.headerItems}>
         {/* <div className={`${router.pathname == "/" ? "active" : ""} header-item`}> */}
         <div
           className={`${router.pathname == "/" ? styles.active : ""} ${
