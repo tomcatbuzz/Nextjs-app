@@ -3,7 +3,7 @@ import Page from "@/components/page";
 export default function About() {
   return (
     <Page>
-      <h1>About Page</h1>
+      <h1 className="about">About Page</h1>
     </Page>
   )
 }
