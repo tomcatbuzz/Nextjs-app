@@ -3,7 +3,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Button from "../Button";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import Nav from '../Nav';
 
 const menu = {
   open: {
@@ -68,7 +69,11 @@ export default function Header() {
         variants={menu}
         animate={isActive ? "open" : "closed"}
         initial="closed"
-      ></motion.div>
+      >
+        <AnimatePresence>
+          {isActive && <Nav />}
+        </AnimatePresence>
+      </motion.div>
       <Button
           isActive={isActive}
           toggleMenu={() => {
