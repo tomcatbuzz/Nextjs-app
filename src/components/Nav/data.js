@@ -16,11 +16,11 @@ export const links = [
 export const footerLinks = [
   {
     title: 'Twitter',
-    href: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+    href: '/about'
   },
   {
     title: 'GitHub',
-    href: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+    href: 'https://github.com/tomcatbuzz'
   },
   {
     title: 'LinkedIn',
